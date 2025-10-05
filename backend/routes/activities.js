@@ -55,7 +55,7 @@ router.get('/', optionalAuth, async (req, res) => {
        ${whereClause}
        ORDER BY a.start_date ASC
        LIMIT ? OFFSET ?`,
-      [userId, ...params, parseInt(limit), offset]
+      [userId || null, ...params, parseInt(limit), offset]
     );
 
     res.json({
@@ -117,7 +117,7 @@ router.get('/:id', optionalAuth, async (req, res) => {
        LEFT JOIN users u ON a.created_by = u.id
        LEFT JOIN activity_registrations ar ON a.id = ar.activity_id AND ar.user_id = ?
        WHERE a.id = ?`,
-      [userId, id]
+      [userId || null, id]
     );
 
     if (activities.length === 0) {
