@@ -7,11 +7,19 @@ const Admin = () => {
 
   const adminSections = [
     {
+      title: 'Demandes d\'Adhésion',
+      description: 'Gérer les demandes d\'adhésion et valider les nouveaux membres',
+      icon: Users,
+      href: '/admin/membership-requests',
+      color: 'bg-blue-500',
+      available: isAdmin() || isExecutive()
+    },
+    {
       title: 'Gestion des Membres',
-      description: 'Gérer les comptes des membres et les demandes d\'adhésion',
+      description: 'Gérer les comptes des membres existants',
       icon: Users,
       href: '/admin/members',
-      color: 'bg-blue-500',
+      color: 'bg-indigo-500',
       available: isAdmin() || isExecutive()
     },
     {

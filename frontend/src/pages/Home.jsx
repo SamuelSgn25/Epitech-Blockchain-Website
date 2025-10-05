@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Calendar, BookOpen, Award, Target, Globe } from 'lucide-react';
 import { ROUTES } from '../utils/constants';
+import BlockchainEffects from '../components/BlockchainEffects';
+import Card3D from '../components/Card3D';
+import BlockchainButton from '../components/BlockchainButton';
+import GlitchText from '../components/GlitchText';
+import BlockchainCard from '../components/BlockchainCard';
 
 const Home = () => {
   const features = [
@@ -53,60 +58,88 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Effets de blockchain en arrière-plan */}
+      <BlockchainEffects />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-blue-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20 overflow-hidden">
+        {/* Effets de particules */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-green-400 rounded-full animate-pulse opacity-60"></div>
+          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping opacity-40"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-50"></div>
+          <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-green-300 rounded-full animate-pulse opacity-70"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            {/* Logo Principal */}
-            <div className="flex justify-center mb-8">
-              <img 
-                src="/images/logo/Epitech Blockchain Club Logo.jpg" 
-                alt="Logo Club Blockchain Epitech Bénin" 
-                className="w-32 h-32 md:w-40 md:h-40 rounded-lg object-cover shadow-lg"
-              />
-            </div>
+            {/* Logo Principal avec effet 3D */}
+            <Card3D className="flex justify-center mb-8" intensity={10}>
+              <div className="relative">
+                <img 
+                  src="/images/logo/Epitech Blockchain Club Logo.jpg" 
+                  alt="Logo Club Blockchain Epitech Bénin" 
+                  className="w-32 h-32 md:w-40 md:h-40 rounded-lg object-cover shadow-2xl border-2 border-green-400"
+                />
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-green-400/20 to-blue-400/20 animate-pulse"></div>
+              </div>
+            </Card3D>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Club Blockchain
-              <span className="block text-green-600">Epitech Bénin</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <GlitchText text="Club Blockchain" className="block" glitchIntensity="low" />
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+                Epitech Bénin
+              </span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Promouvoir l'éducation et l'innovation blockchain au Bénin et en Afrique. 
               Rejoignez-nous pour explorer l'univers passionnant de la blockchain !
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to={ROUTES.MEMBERSHIP}
-                className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-flex items-center justify-center"
+              <BlockchainButton
+                variant="primary"
+                size="lg"
+                onClick={() => window.location.href = ROUTES.MEMBERSHIP_REQUEST}
+                className="group"
               >
-                Rejoindre le Club
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to={ROUTES.ACTIVITIES}
-                className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors inline-flex items-center justify-center"
+                <span className="flex items-center">
+                  Rejoindre le Club
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </BlockchainButton>
+              
+              <BlockchainButton
+                variant="outline"
+                size="lg"
+                onClick={() => window.location.href = ROUTES.ACTIVITIES}
+                glowColor="#3B82F6"
+                className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
               >
                 Voir les Activités
-              </Link>
+              </BlockchainButton>
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">
-                  {stat.number}
+              <Card3D key={index} className="text-center" intensity={5}>
+                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600 mb-2">
+                    <GlitchText text={stat.number} glitchIntensity="low" />
+                  </div>
+                  <div className="text-gray-600 font-medium">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-gray-600 font-medium">
-                  {stat.label}
-                </div>
-              </div>
+              </Card3D>
             ))}
           </div>
         </div>
@@ -128,17 +161,14 @@ const Home = () => {
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-green-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
+                <BlockchainCard
+                  key={index}
+                  icon={Icon}
+                  title={feature.title}
+                  description={feature.description}
+                  glowColor={index % 2 === 0 ? '#10B981' : '#3B82F6'}
+                  className="h-full"
+                />
               );
             })}
           </div>

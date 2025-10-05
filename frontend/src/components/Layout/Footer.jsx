@@ -17,7 +17,7 @@ const Footer = () => {
       { name: 'Adhésion', href: ROUTES.MEMBERSHIP },
       { name: 'Contact', href: ROUTES.CONTACT },
       { name: 'Connexion', href: ROUTES.LOGIN },
-      { name: 'Inscription', href: ROUTES.REGISTER }
+      { name: 'Demande d\'adhésion', href: ROUTES.MEMBERSHIP_REQUEST }
     ],
     partenaires: [
       { name: 'Epitech Bénin', href: 'https://epitech.bj/', external: true },

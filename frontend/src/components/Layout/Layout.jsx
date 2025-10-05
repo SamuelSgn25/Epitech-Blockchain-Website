@@ -1,12 +1,13 @@
 import React from 'react';
 import { Toaster } from 'react-hot-toast';
 import Header from './Header';
+import BlockchainNav from '../BlockchainNav';
 import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <BlockchainNav />
       <main className="flex-grow">
         {children}
       </main>

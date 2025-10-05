@@ -69,6 +69,7 @@ export const ROUTES = {
   CONTACT: '/contact',
   LOGIN: '/login',
   REGISTER: '/register',
+  MEMBERSHIP_REQUEST: '/membership-request',
   DASHBOARD: '/dashboard',
   PROFILE: '/profile',
   ADMIN: '/admin'
@@ -86,6 +87,7 @@ export const API_ENDPOINTS = {
   EXAMS: '/exams',
   ATTENDANCE: '/attendance',
   MEMBERSHIP: '/membership',
+  MEMBERSHIP_REQUESTS: '/membership-requests',
   PARTNERS: '/partners'
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
+import { ToastProvider } from './context/ToastContext';
 import Layout from './components/Layout/Layout';
 import { ROUTES } from './utils/constants';
 
@@ -8,6 +9,7 @@ import { ROUTES } from './utils/constants';
 import Home from './pages/Home';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
+import MembershipRequest from './pages/auth/MembershipRequest';
 
 // Lazy loading pour les autres pages
 import { lazy, Suspense } from 'react';
@@ -21,10 +23,12 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Profile = lazy(() => import('./pages/Profile'));
 const Admin = lazy(() => import('./pages/Admin'));
+const MembershipRequests = lazy(() => import('./pages/admin/MembershipRequests'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Composant de chargement
 const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center">
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-green-600"></div>
   </div>
 );
@@ -45,10 +49,11 @@ const AdminRoute = ({ children }) => {
 function App() {
   return (
     <AuthProvider>
-      <Router>
-        <div className="App">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+      <ToastProvider>
+        <Router>
+          <div className="App">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
               {/* Routes publiques */}
               <Route path={ROUTES.HOME} element={<Layout><Home /></Layout>} />
               <Route path={ROUTES.ABOUT} element={<Layout><About /></Layout>} />
@@ -61,6 +66,7 @@ function App() {
               {/* Routes d'authentification */}
               <Route path={ROUTES.LOGIN} element={<Login />} />
               <Route path={ROUTES.REGISTER} element={<Register />} />
+              <Route path={ROUTES.MEMBERSHIP_REQUEST} element={<MembershipRequest />} />
               
               {/* Routes protégées */}
               <Route 
@@ -89,13 +95,24 @@ function App() {
                   </ProtectedRoute>
                 } 
               />
+              <Route 
+                path="/admin/membership-requests" 
+                element={
+                  <ProtectedRoute>
+                    <AdminRoute>
+                      <Layout><MembershipRequests /></Layout>
+                    </AdminRoute>
+                  </ProtectedRoute>
+                } 
+              />
               
-              {/* Route par défaut */}
-              <Route path="*" element={<Navigate to={ROUTES.HOME} replace />} />
-            </Routes>
-          </Suspense>
-        </div>
-      </Router>
+              {/* Route 404 */}
+              <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </div>
+        </Router>
+      </ToastProvider>
     </AuthProvider>
   );
 }
