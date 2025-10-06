@@ -66,14 +66,14 @@ Le **Club Blockchain d'Epitech Bénin** est une initiative étudiante née de la
 - **CORS** - Gestion des requêtes cross-origin
 
 ### Base de Données
-- **PostgreSQL** (Supabase) - Base de données principale
+- **MySQL** (PlanetScale) - Base de données principale
 - **Schéma relationnel** avec tables pour utilisateurs, activités, examens, etc.
 
 ### Déploiement
-- **Vercel** - Frontend
-- **Render** - Backend
-- **Supabase** - Base de données
-- **Cloudflare** - Nom de domaine et CDN
+- **Vercel** - Frontend (React + Vite)
+- **Render.com** - Backend (Node.js + Express)
+- **PlanetScale** - Base de données (MySQL)
+- **GitHub Actions** - CI/CD automatique
 
 ## 📁 Structure du Projet
 
@@ -212,20 +212,42 @@ npm run dev
 
 ## 🚀 Déploiement
 
-### Frontend (Vercel)
-1. Connecter votre repository GitHub à Vercel
-2. Configurer les variables d'environnement
-3. Déployer automatiquement
+### 📖 Guides de Déploiement
 
-### Backend (Render)
-1. Connecter votre repository GitHub à Render
-2. Configurer les variables d'environnement
-3. Déployer le service web
+Nous avons préparé des guides détaillés pour vous aider à déployer l'application :
 
-### Base de Données (Supabase)
-1. Créer un projet Supabase
-2. Configurer la base de données PostgreSQL
-3. Exécuter le script de création des tables
+- **[QUICK-DEPLOY.md](QUICK-DEPLOY.md)** - Guide rapide (15 minutes)
+- **[DEPLOYMENT-GUIDE.md](DEPLOYMENT-GUIDE.md)** - Guide complet et détaillé
+- **[DEPLOYMENT-CHECKLIST.md](DEPLOYMENT-CHECKLIST.md)** - Checklist complète
+
+### ⚡ Déploiement Rapide
+
+```bash
+# 1. Base de données (PlanetScale)
+# - Créer un compte sur planetscale.com
+# - Créer une base de données
+# - Exécuter backend/scripts/planetscale-schema.sql
+
+# 2. Backend (Render.com)
+# - Connecter GitHub à Render
+# - Configurer les variables d'environnement
+# - Déployer automatiquement
+
+# 3. Frontend (Vercel)
+# - Connecter GitHub à Vercel
+# - Configurer VITE_API_URL
+# - Déployer automatiquement
+```
+
+### 🌐 URLs de Production
+
+- **Frontend**: https://votre-app.vercel.app
+- **Backend**: https://epitech-blockchain-backend.onrender.com
+- **Database**: PlanetScale Console
+
+### 💰 Coût
+
+**0€/mois** avec les plans gratuits de PlanetScale, Render et Vercel !
 
 ## 📊 Base de Données
 

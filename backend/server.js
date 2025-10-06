@@ -29,7 +29,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.DB_PORT;
+const PORT = process.env.PORT || 5000;
 
 // Security middleware
 app.use(helmet({
@@ -74,13 +74,23 @@ if (process.env.NODE_ENV === 'development') {
 // Static files
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Health check endpoint
+// Health check endpoints
 app.get('/health', (req, res) => {
   res.status(200).json({
     status: 'OK',
     message: 'Club Blockchain Epitech API is running',
     timestamp: new Date().toISOString(),
     version: '1.0.0'
+  });
+});
+
+app.get('/api/health', (req, res) => {
+  res.status(200).json({
+    status: 'OK',
+    message: 'Club Blockchain Epitech API is running',
+    timestamp: new Date().toISOString(),
+    version: '1.0.0',
+    environment: process.env.NODE_ENV || 'development'
   });
 });
 
