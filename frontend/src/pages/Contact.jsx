@@ -25,8 +25,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'contact@epitech-blockchain.bj',
-      link: 'mailto:contact@epitech-blockchain.bj'
+      value: 'epitechblockchain@gmail.com',
+      link: 'mailto:epitechblockchain@gmail.com'
     },
     {
       icon: Phone,

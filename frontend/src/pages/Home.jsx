@@ -33,9 +33,9 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '50+', label: 'Membres Actifs' },
-    { number: '20+', label: 'Événements Organisés' },
-    { number: '3', label: 'Partenaires Stratégiques' },
+    { number: '30+', label: 'Membres Actifs' },
+    { number: '20+', label: 'Événements à venir' },
+    { number: '4', label: 'Partenaires Stratégiques' },
     { number: '100%', label: 'Satisfaction' }
   ];
 
@@ -52,7 +52,7 @@ const Home = () => {
     },
     {
       name: 'Estelle GOSSOU',
-      position: 'Secrétaire',
+      position: 'Secrétaire Générale',
       image: '/images/executives/secretary.jpg'
     }
   ];
@@ -74,8 +74,8 @@ const Home = () => {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            {/* Logo Principal avec effet 3D */}
-            <Card3D className="flex justify-center mb-8" intensity={10}>
+            {/* Logo Principal */}
+            <div className="flex justify-center mb-8">
               <div className="relative">
                 <img 
                   src="/images/logo/Epitech Blockchain Club Logo.jpg" 
@@ -84,7 +84,7 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-green-400/20 to-blue-400/20 animate-pulse"></div>
               </div>
-            </Card3D>
+            </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <GlitchText text="Club Blockchain" className="block" glitchIntensity="low" />
@@ -130,16 +130,16 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <Card3D key={index} className="text-center" intensity={5}>
+              <div key={index} className="text-center">
                 <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                   <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600 mb-2">
-                    <GlitchText text={stat.number} glitchIntensity="low" />
+                    {stat.number}
                   </div>
-                  <div className="text-gray-600 font-medium">
+                  <div className="text-gray-600">
                     {stat.label}
                   </div>
                 </div>
-              </Card3D>
+              </div>
             ))}
           </div>
         </div>
@@ -239,7 +239,7 @@ const Home = () => {
                 École d'informatique et d'innovation technologique
               </p>
               <a
-                href="https://epitech.bj/"
+                href="https://epitech.africa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-700 font-medium"

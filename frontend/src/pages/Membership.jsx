@@ -17,7 +17,7 @@ const Membership = () => {
     {
       icon: Users,
       title: 'Communauté Active',
-      description: 'Rejoignez une communauté de plus de 50 étudiants passionnés par la blockchain'
+      description: 'Rejoignez une communauté de plus de 30 étudiants passionnés par la blockchain'
     },
     {
       icon: Calendar,
@@ -222,7 +222,7 @@ const Membership = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Identifiant Étudiant
+                    Identifiant Étudiant(Promotion)
                   </label>
                   <input
                     {...register('studentId', {

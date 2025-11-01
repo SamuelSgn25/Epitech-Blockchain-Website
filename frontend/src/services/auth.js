@@ -2,13 +2,14 @@ import api from './api';
 
 export const authService = {
   // Connexion
-  login: async (email, password) => {
-    const response = await api.post('/auth/login', { email, password });
+  login: async (promotion, password) => {
+    const response = await api.post('/auth/login', { promotion, password });
     return response.data;
   },
 
-  // Inscription
+  // Inscription (réservée à l'administration)
   register: async (userData) => {
+    // S'assurer que seul un administrateur peut créer des comptes
     const response = await api.post('/auth/register', userData);
     return response.data;
   },

@@ -9,14 +9,24 @@ const About = () => {
       description: 'Création du Club Blockchain d\'Epitech Bénin suite à une formation de l\'Africa Blockchain Institute'
     },
     {
-      date: 'Septembre 2024',
+      date: '1er Septembre 2024',
       title: 'Premier Bureau Exécutif',
       description: 'Élection du premier bureau exécutif avec Soumaila CISSE comme Président'
     },
     {
-      date: 'Janvier 2025',
+      date: 'Juin 2025',
+      title: 'Participation au BitCoin Mastermind 2025',
+      description: 'Participation au BitCoin Mastermind 2025 organisé par BitDevs Cotonou et African Free Routers'
+    },
+    {
+      date: '1er Septembre 2025',
       title: 'Nouveau Bureau 2025-2026',
       description: 'Transition vers le nouveau bureau exécutif dirigé par Brouhane BONI GOMINA'
+    },
+    {
+      date: '4 Novembre 2025',
+      title: '1er workshop technique pour les étudiants du Master à Epitech',
+      description: 'Organisation du workshop introductif à la blockchain au profit des étudiants du Master 1 à Epitech Bénin'
     }
   ];
 
@@ -51,17 +61,17 @@ const About = () => {
     },
     {
       name: 'Samuel SOGLOHOUN',
-      role: 'Secrétaire Général et Vice-Président par Intérim',
+      role: '1er Secrétaire Général',
       description: 'Coordinateur actuel du Bureau Exécutif, il assure la continuité et le développement du club'
     },
     {
       name: 'Godwin BEWA',
-      role: 'Community Manager',
+      role: '1er Community Manager',
       description: 'Il a su créer et animer une communauté dynamique et engagée'
     },
     {
       name: 'Cynthia ZINSOU',
-      role: 'Responsable Ressources Humaines',
+      role: '1ère Responsable Ressources Humaines',
       description: 'Elle a mis en place les structures de gestion des membres et des ressources'
     }
   ];

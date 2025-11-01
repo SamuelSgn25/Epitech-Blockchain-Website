@@ -4,10 +4,10 @@ import { ExternalLink, Globe, Mail, Phone } from 'lucide-react';
 const Partners = () => {
   const partners = [
     {
-      name: 'Epitech Bénin',
-      description: 'École d\'informatique et d\'innovation technologique de référence au Bénin. Epitech forme les futurs experts en technologies de l\'information avec une approche pratique et innovante.',
-      website: 'https://epitech.bj/',
-      email: 'contact@epitech.bj',
+      name: 'Epitech Afrique',
+      description: 'École d\'informatique et d\'innovation technologique de référence en Afrique. Epitech forme les futurs experts en technologies de l\'information avec une approche pratique et innovante.',
+      website: 'https://www.epitech.africa/',
+      email: 'contact@epitech.africa',
       phone: '+229 XX XX XX XX',
       logo: '/images/partners/epitech.png',
       type: 'Institution Académique'
@@ -29,6 +29,16 @@ const Partners = () => {
       phone: '+229 XX XX XX XX',
       logo: '/images/partners/abi.png',
       type: 'Institut de Formation'
+    },
+    {
+      name: 'Tech BitDevs Cotonou & Bitcoin Benin',
+      description: 'Communauté technique dédiée au développement Bitcoin et aux technologies blockchain en Afrique. Partenariat stratégique pour promouvoir l\'éducation et l\'adoption des cryptomonnaies au Bénin.',
+      website: 'https://bitdevs.africa/',
+      email: 'contact@bitdevs.africa',
+      phone: '+229 XX XX XX XX',
+      logo: '/images/partners/bitdevs-bitcoin-benin.png',
+      type: 'Communauté Technique',
+      partnershipDate: '23 Octobre 2025'
     }
   ];
 

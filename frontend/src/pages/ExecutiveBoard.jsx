@@ -26,7 +26,7 @@ const ExecutiveBoard = () => {
     },
     {
       name: 'Estelle GOSSOU',
-      position: 'Secrétaire',
+      position: 'Secrétaire Générale',
       role: 'executive',
       bio: 'Organisée et méthodique, elle gère l\'administration et la communication interne du club.',
       email: 'secretary@epitech-blockchain.bj',
@@ -45,24 +45,24 @@ const ExecutiveBoard = () => {
       image: '/images/members/divine-azanmassou.jpg'
     },
     {
-      name: 'Patrice DAGBE',
-      position: 'Chargé du Pôle Evènements et Partenariats',
+      name: 'Christopher GUIDIBI',
+      position: 'Lead du Pôle Evènements et Partenariats',
       role: 'executive',
       bio: 'Créatif et dynamique, il organise nos événements et développe nos partenariats stratégiques.',
       email: 'events@epitech-blockchain.bj',
       linkedin: '#',
       twitter: '#',
-      image: '/images/members/patrice-dagbe.jpg'
+      image: '/images/members/christopher-guidibi.jpg'
     },
     {
-      name: 'Jimmy BACHABI',
-      position: 'Adjoint chargé des Evènements et Partenariats',
+      name: 'Stella GBAGUIDI',
+      position: 'Adjointe du Pôle Evènements et Partenariats',
       role: 'executive',
       bio: 'Support précieux dans l\'organisation d\'événements et la gestion des partenariats.',
       email: 'events-assistant@epitech-blockchain.bj',
       linkedin: '#',
       twitter: '#',
-      image: '/images/members/jimmy-bachabi.jpg'
+      image: '/images/members/stella-gbaguidi.jpg'
     },
     {
       name: 'Moktar VODOUNNON',
@@ -105,7 +105,7 @@ const ExecutiveBoard = () => {
       image: '/images/members/christian-abiala.jpg'
     },
     {
-      name: 'Eunice GOSSOU-BAH',
+      name: 'Eunice GOSSOU BAH',
       position: 'Lead Pôle Ressources Humaines',
       role: 'executive',
       bio: 'Gestionnaire des talents, elle s\'occupe du développement et de la satisfaction des membres.',
@@ -115,14 +115,14 @@ const ExecutiveBoard = () => {
       image: '/images/members/eunice-gossou-bah.jpg'
     },
     {
-      name: 'Ilhaam MAMA',
+      name: 'Jimmy BACHABI',
       position: 'Adjoint Pôle Ressources Humaines',
       role: 'executive',
-      bio: 'Support dans la gestion des ressources humaines et l\'accompagnement des membres.',
+      bio: 'Support précieux dans la gestion des ressources humaines et l\'accompagnement des membres.',
       email: 'hr-assistant@epitech-blockchain.bj',
       linkedin: '#',
       twitter: '#',
-      image: '/images/members/ilhaam-mama.jpg'
+      image: '/images/members/jimmy-bachabi.jpg'
     },
     {
       name: 'Farid ADOI',

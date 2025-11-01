@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, User, LogOut, Settings, Shield } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { ROUTES } from '../../utils/constants';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,6 @@ const Header = () => {
     { name: 'Bureau Exécutif', href: ROUTES.EXECUTIVE_BOARD },
     { name: 'Partenaires', href: ROUTES.PARTNERS },
     { name: 'Activités', href: ROUTES.ACTIVITIES },
-    { name: 'Adhésion', href: ROUTES.MEMBERSHIP },
     { name: 'Contact', href: ROUTES.CONTACT }
   ];
 
@@ -137,20 +137,12 @@ const Header = () => {
                 )}
               </div>
             ) : (
-              <div className="flex items-center space-x-2">
-                <Link
-                  to={ROUTES.LOGIN}
-                  className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  Connexion
-                </Link>
-                <Link
-                  to={ROUTES.MEMBERSHIP_REQUEST}
-                  className="bg-green-600 text-white hover:bg-green-700 px-4 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  Demande d'adhésion
-                </Link>
-              </div>
+              <Link
+                to={ROUTES.LOGIN}
+                className="bg-gradient-to-r from-green-600 to-green-700 text-white hover:from-green-700 hover:to-green-800 px-6 py-2 rounded-lg text-sm font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              >
+                Espace Membre
+              </Link>
             )}
 
             {/* Mobile menu button */}
@@ -186,17 +178,10 @@ const Header = () => {
                 <div className="border-t border-gray-200 pt-2 mt-2">
                   <Link
                     to={ROUTES.LOGIN}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-gray-100"
+                    className="block px-4 py-3 rounded-lg text-base font-medium text-center bg-gradient-to-r from-green-600 to-green-700 text-white hover:from-green-700 hover:to-green-800 shadow-md hover:shadow-lg"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Connexion
-                  </Link>
-                  <Link
-                    to={ROUTES.REGISTER}
-                    className="block px-3 py-2 rounded-md text-base font-medium bg-green-600 text-white hover:bg-green-700"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    S'inscrire
+                    Espace Membre
                   </Link>
                 </div>
               )}

@@ -20,7 +20,7 @@ const Footer = () => {
       { name: 'Demande d\'adhésion', href: ROUTES.MEMBERSHIP_REQUEST }
     ],
     partenaires: [
-      { name: 'Epitech Bénin', href: 'https://epitech.bj/', external: true },
+      { name: 'Epitech Bénin', href: 'https://epitech.africa/', external: true },
       { name: 'Future Studio', href: 'https://www.futurestudio.bj/', external: true },
       { name: 'Africa Blockchain Institute', href: 'https://africablockchain.institute/', external: true }
     ]
