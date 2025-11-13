@@ -29,14 +29,14 @@ Le **Club Blockchain d'Epitech Bénin** est une initiative étudiante née de la
 | **Président** | Brouhane BONI GOMINA | Direction générale du club |
 | **Secrétaire** | Estelle GOSSOU | Gestion administrative |
 | **Trésorière** | Divine AZANMASSO | Gestion financière |
-| **Chargé Évènements** | Patrice DAGBE | Organisation des activités |
-| **Adjoint Évènements** | Jimmy BACHABI | Support organisation |
+| **Chargé Évènements et Partenariats** | Christopher GUIDIBI | Organisation des activités |
+| **Adjoint Évènements et Partenariats** | Stella GBAGUIDI | Support organisation |
 | **Lead Tech** | Moktar VODOUNNON | Direction technique |
 | **Lead Communication** | Imane PHILIPPE | Communication externe |
 | **Adjoint Communication** | Morayo ELEGBEDE | Support communication |
 | **Chargé Pédago** | Christian ABIALA | Formation et éducation |
-| **Lead RH** | Eunice GOSSOU-BAH | Gestion des membres |
-| **Adjoint RH** | Ilhaam MAMA | Support RH |
+| **Lead RH** | Eunice GOSSOU BAH | Gestion des membres |
+| **Adjoint RH** | Jimmy BACHABI | Support RH |
 | **Conseiller** | Farid ADOI | Conseil Tech et Pédago |
 | **Coordinateur** | Samuel SOGLOHOUN | Coordination du Bureau |
 

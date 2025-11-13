@@ -173,20 +173,20 @@ Epitech-Blockchain-Website/
 - ✅ **Samuel SOGLOHOUN** - Coordinateur du Bureau Exécutif
 - ✅ **Estelle GOSSOU** - Secrétaire
 - ✅ **Divine AZANMASSO** - Trésorière
-- ✅ **Patrice DAGBE** - Chargé du Pôle Evènements et Partenariats
-- ✅ **Jimmy BACHABI** - Adjoint chargé des Evènements et Partenariats
+- ✅ **Christopher GUIDIBI** - Chargé du Pôle Evènements et Partenariats
+- ✅ **Stella GBAGUIDI** - Adjoint chargé des Evènements et Partenariats
 - ✅ **Moktar VODOUNNON** - Lead du Pôle Tech
 - ✅ **Imane PHILIPPE** - Lead du Pôle Communication
 - ✅ **Morayo ELEGBEDE** - Adjoint Chargé Pôle Communication
 - ✅ **Christian ABIALA** - Chargé du Pôle Pédago
-- ✅ **Eunice GOSSOU-BAH** - Lead Pôle Ressources Humaines
-- ✅ **Ilhaam MAMA** - Adjoint Pôle Ressources Humaines
+- ✅ **Eunice GOSSOU BAH** - Lead Pôle Ressources Humaines
+- ✅ **Jimmy BACHABI** - Adjoint Pôle Ressources Humaines
 - ✅ **Farid ADOI** - Conseiller Pôle Tech et Pédago
 
 ## 🤝 **Partenaires Intégrés**
 
 ### ✅ **Partenaires Configurés**
-- ✅ **Epitech Bénin** : https://epitech.bj/
+- ✅ **Epitech Bénin** : https://epitech.africa/
 - ✅ **Future Studio** : https://www.futurestudio.bj/
 - ✅ **Africa Blockchain Institute** : https://africablockchain.institute/
 
